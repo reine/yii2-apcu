@@ -8,7 +8,6 @@ ENV APCU_VERSION=${buildtime_apcu_version}
 
 # Install selected extensions and other stuff
 RUN pecl install apcu-${APCU_VERSION} && docker-php-ext-enable apcu \
-    && echo "extension=apcu.so" >> /usr/local/etc/php/php.ini \
     && echo "apc.enable_cli=1" >> /usr/local/etc/php/php.ini \
     && echo "apc.enable=1" >> /usr/local/etc/php/php.ini
 
