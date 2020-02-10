@@ -9,6 +9,6 @@ RUN pecl install apcu-${APCU_VERSION} && docker-php-ext-enable apcu \
     && echo "apc.enable=1" >> /usr/local/etc/php/php.ini
 
 RUN apt-get update \
-    && apt-get -y --no-install-recommends install php7.3-imap \
+    && apt-get -y --no-install-recommends install php-imap \
     && docker-php-ext-install imap \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
