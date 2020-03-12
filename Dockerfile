@@ -12,10 +12,5 @@ RUN pecl install apcu-${APCU_VERSION} && docker-php-ext-enable apcu \
 RUN apt-get update && apt-get -y install libc-client-dev php7.3-common php7.3-imap \
     && docker-php-ext-configure imap --with-imap --with-imap-ssl \
     && docker-php-ext-install imap \
-    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
-RUN apt-get update \
-    && apt-get -y --no-install-recommends install libc-client-dev php7.3-imap \
-    && docker-php-ext-configure imap --with-imap --with-imap-ssl \
-    && docker-php-ext-install imap \
     && docker-php-ext-enable imap \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
