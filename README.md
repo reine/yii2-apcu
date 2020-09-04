@@ -5,4 +5,4 @@ Docker image of Yii2 with APCu extension
 
 This is a base image that uses the official Yii Framework's docker image with PHP 7.3 and Apache, and with APCu support added during build time.
 
-Latest APCu version: 5.1.12
+Latest APCu version: 5.1.17
