@@ -1,7 +1,7 @@
 FROM yiisoftware/yii2-php:7.4-apache
 
 # Set on-build env values
-ARG APCU_VERSION=5.1.19
+ARG APCU_VERSION=5.1.21
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Install selected extensions and other stuff
